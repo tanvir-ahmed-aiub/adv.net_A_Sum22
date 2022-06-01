@@ -39,5 +39,28 @@ namespace IntroMVC.Controllers
             };
             return View(s1);
         }
+        [HttpGet]
+        public ActionResult Create() {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Student st) {
+            /*ViewBag.Name = form["Name"];
+            ViewBag.Id = form["Id"];
+            ViewBag.Dob = form["Dob"];*/
+            /*ViewBag.Name = Request["Name"];
+            ViewBag.Id = Request["Id"];
+            ViewBag.Dob = Request["Dob"];*/
+            /*ViewBag.Name = Name;
+            ViewBag.Id = Id;
+            ViewBag.Dob =Dob;*/
+            if (ModelState.IsValid) {
+                return RedirectToAction("Index");
+            }
+            return View(st);
+        }
+        public ActionResult Submit() {
+            return View();
+        }
     }
 }

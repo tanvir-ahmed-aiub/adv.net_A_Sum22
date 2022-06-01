@@ -165,6 +165,8 @@
     <Content Include="Views\Home\Dashboard.cshtml" />
     <Content Include="Views\Student\Info.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Submit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

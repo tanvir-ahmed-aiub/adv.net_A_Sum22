@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@if(Model != null)
+            {
+                <h1>@Model.Name</h1>
+            }
+<form action="" method="post">
+    Id: <input type="text" name="Id" value="@(Model != null ? Model.Id : "")" class="form-control" />
+    @Html.ValidationMessage("Id",new {@class="text-danger" })<br>
+    Name: <input type="text" name="Name" class="form-control" />
+    @Html.ValidationMessage("Name")<br />
+    Dob: <input type="date" name="Dob" class="form-control" />
+    @Html.ValidationMessage("Dob")<br />
+    <input type="submit" class="btn btn-success" />
+</form>
+
