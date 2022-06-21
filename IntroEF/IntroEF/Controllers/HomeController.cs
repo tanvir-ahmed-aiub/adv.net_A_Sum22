@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IntroEF.Auth;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,11 +7,13 @@ using System.Web.Mvc;
 
 namespace IntroEF.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
-            return View();
+              return View();
         }
 
         public ActionResult About()
@@ -19,7 +22,7 @@ namespace IntroEF.Controllers
 
             return View();
         }
-
+        [AllowAnonymous]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
